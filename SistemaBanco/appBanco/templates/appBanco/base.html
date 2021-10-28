@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFOU4ItO0cvcVHUOL50XmhienF2zifKzXRw&usqp=CAU" sizes="64x64">
+    <link rel="stylesheet" href="{%  static 'appBanco/css/homeStyles.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static 'appBanco/css/baseStyles.css' %}">
+    <script src="{% static 'appBanco/script/slideEfecto.js' %}"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <title>Banco Crecer | Inicio</title>
+</head>
+
+<!--
+-->
+
+<body>
+    <div class="nav-bar">
+        <nav class="navbar-items">
+            <a href="{% url 'Home' %}"> <button {% if request.path == '/appBanco' %} style="list-style: none;
+                background-color: rgb(7, 107, 90);
+                color: white;" {% endif %}>Inicio</button></a>
+            <a href="{% url 'Servicios' %}"> <button {% if request.path == '/appBanco/servicios' %} style="list-style: none;
+                background-color: rgb(7, 107, 90);
+                color: white;" {% endif %}>Servicios</button></a>
+            <a href="{% url 'Banca' %}"> <button {% if request.path == '/appBanco/banca' %} style="list-style: none;
+                background-color: rgb(7, 107, 90);
+                color: white;" {% endif %}> Banca </button></a>
+            <a href="{% url 'Informacion' %}"> <button {% if request.path == '/appBanco/informacion' %} style="list-style: none;
+                background-color: rgb(7, 107, 90);
+                color: white;" {% endif %}> Informacion </button></a>
+            <a href="{% url 'Contactos' %}"> <button {% if request.path == '/appBanco/contactos' %} style="list-style: none;
+                background-color: rgb(7, 107, 90);
+                color: white;" {% endif %}> Contactos </button></a>
+        </nav>
+        <nav class="navbar-sesion">
+            <a><button>Iniciar Sesion</button></a>
+            <a><button>Registrarse</button></a>
+        </nav>
+    </div>
+    <!--Contenido diferente herencia entre plantillas-->
+    {% block content %} {% endblock%}
+
+    <footer>
+        <div class="container-section">
+            <h5>Nosotros</h5>
+            <ul>
+                <a>Ubícanos</a>
+                <a>Contactanos</a>
+                <a>Seguridad</a>
+                <a>Conocenos</a>
+            </ul>
+        </div>
+        <div class="container-section">
+            <h5>Acerca</h5>
+            <ul>
+                <a>Transparencia</a>
+                <a>Defensor al cliente</a>
+                <a>Educacion Financiera</a>
+                <a>Canales de atencion</a>
+            </ul>
+        </div>
+        <div class="container-section">
+            <h5>En redes</h5>
+            <ul>
+                <li><a href="#"><i class="facebook fab fa-facebook"> </i> </a> Facebook</li>
+                <li><a href="#"><i class="insta fab fa-instagram"> </i></a> Instagram</li>
+                <li><a href="#"><i class="google fab fa-google"></i></a> Gmail</li>
+            </ul>
+
+        </div>
+        <div class="container-section">
+            <h5>Atencion al cliente</h5>
+            <ul>
+                <a>Sugerencias y reclamos</a>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

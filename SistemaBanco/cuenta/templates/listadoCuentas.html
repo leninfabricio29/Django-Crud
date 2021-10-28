@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFOU4ItO0cvcVHUOL50XmhienF2zifKzXRw&usqp=CAU" sizes="64x64">
+    <title>{% block titulo %} Cuentas {% endblock titulo %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    {% block cuerpo %}
+    <h1>Listado Cuentas</h1>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+            <th>Propietario</th>
+            <th>Tipo Cuenta</th>
+            <th>Nro. Cuenta</th>
+            <th>Saldo Disponible</th>
+            <th>Fecha Creacion</th>
+            <th>Opcion</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for cuenta in cuentas %}
+            <tr>
+                <td>{{cuenta.id_Cliente}}</td>
+                <td>{{cuenta.Tipo}}</td>
+                <td>{{cuenta.numero_Cuenta}}</td>
+                <td>{{cuenta.saldo_Dsiponible}}</td>
+                <td>{{cuenta.fecha_Creacion}}</td>
+                <td><button type="button" class="btn btn-warning"><a >Editar</a></button>
+                    <button type="button" class="btn btn-danger"><a ">Eliminar</a></a></button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock cuerpo %}
+</body>
+</html>

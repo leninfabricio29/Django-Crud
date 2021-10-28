@@ -1,0 +1,90 @@
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    border-radius: 40%;
+}
+
+.styled-table th {
+    background-color: rgb(12, 117, 94);
+    color: rgb(252, 252, 252);
+    width: 25%;
+    text-align: left;
+    vertical-align: middle;
+    height: 50px;
+    padding-left: 10px;
+}
+
+
+
+.styled-table td{
+    background-color: white;
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    align-items: flex-end;    
+    height: 50px;
+    padding: 30p;
+    padding-left: 10px;
+    padding-top: 15px ;
+}
+
+
+.styled-table td{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.styled-table tr:hover td{
+    background-color:#d2f0f7;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px none black;
+    cursor: pointer;
+
+}
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

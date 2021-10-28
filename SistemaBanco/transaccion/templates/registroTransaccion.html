@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFOU4ItO0cvcVHUOL50XmhienF2zifKzXRw&usqp=CAU" sizes="64x64">
+<link rel="stylesheet" href="{%  static 'cliente/css/stylesRegistroCliente.css' %}">
+{% block cuerpo %}
+<title>Registro Transacciones</title>
+<h3>Formulario de registro Transacciones</h3>
+<div class="containerPrincipal">
+    <form method="POST" class="form">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">Crear</button>
+    </form>
+</div>
+
+{% endblock cuerpo %}

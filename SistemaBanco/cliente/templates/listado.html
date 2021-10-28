@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{%  static 'cliente/css/stylesListado.css' %}">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFOU4ItO0cvcVHUOL50XmhienF2zifKzXRw&usqp=CAU" sizes="64x64">
+    <title>{% block titulo %} Clientes {% endblock titulo %}</title>
+</head>
+<body>
+    {% block cuerpo %}
+    <h1>Listado Clientes</h1>
+    <table class="styled-table">
+        <thead >
+            <tr >
+            <th >Nombre</th>
+            <th >Apellido</th>
+            <th >Cedula</th>
+            <th >Opcion</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellido}}</td>
+                <td>{{cliente.cedula}}</td>
+                <td >
+                    <div class="tooltip">
+                        <i class='bx bxs-edit-alt' style="color: rgb(128, 128, 12);
+                         font-size: 25px;">
+                            <span class="tooltiptext">Editar</span>
+                        </i>
+                    </div>
+                    <div class="tooltip">
+                        <i class='bx bxs-x-circle' style="color: rgb(175, 16, 16);
+                        font-size: 25px;">
+                            <span class="tooltiptext" >Eliminar</span>
+                        </i>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock cuerpo %}
+</body>
+</html>

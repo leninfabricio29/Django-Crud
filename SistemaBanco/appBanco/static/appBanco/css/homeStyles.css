@@ -1,0 +1,120 @@
+.conteiner{
+    background-color: rgb(224, 230, 230);
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.item-container{
+    height: 500px;
+}
+
+
+.item-container img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.text-container{
+    border-radius: 4px;
+    position: relative;
+    background-color: rgb(204, 204, 204);
+    color: rgb(70, 64, 64);
+    display: inline-block;
+    width: 260px;
+    padding: 10px 10px;
+    bottom: 35%;
+    left: 5%;
+}
+
+.text-container p{
+    text-align: justify;
+}
+
+.text-container button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 70%;    
+}
+
+.text-container button:hover{
+    border-radius: 2px;
+    border-bottom: 1px solid rgb(20, 151, 129);
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu > li{
+    display: inline-block;
+}
+
+
+.title{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.max-width{
+    background: rgb(189, 189, 189);
+    color: rgb(97, 94, 94);
+    font-family: 'Poppins', sans-serif;
+}
+
+.conteiner-Carrusel .carousel{
+    padding:  20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner-Carrusel .carousel h5{
+    padding-bottom:  10px;
+}
+
+.conteiner-Carrusel .carousel .card img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 4%;
+    transition: all .3s ease;
+}
+
+.conteiner-Carrusel .carousel .card:hover{
+    cursor: grab;
+}
+
+.conteiner-Carrusel .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+
+.conteiner-Carrusel .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    
+}
+
+.conteiner-Carrusel .carousel .card video{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 25%;
+    border: 5px solid rgb(68, 66, 67);
+    transition: all .3s ease;
+}

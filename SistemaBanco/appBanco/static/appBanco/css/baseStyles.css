@@ -1,0 +1,98 @@
+body{
+    display: inline;
+}
+
+.nav-bar{
+    display: flex;
+    width: auto;
+    background-color: rgb(20, 151, 129);
+    height: 50px;    
+
+}
+
+
+.navbar-items{
+    position: relative;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    left: 25%;
+}
+
+
+.navbar-items button{
+    background-color: rgb(20, 151, 129);
+    border: 2px solid transparent;
+    padding: 15px 35px;
+}
+
+.navbar-items button:hover{
+    background-color: rgb(7, 107, 90);
+    color: white;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.navbar-sesion{
+    position: relative;
+    left: 40%;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-sesion button{
+    background-color: rgb(20, 151, 129);
+    border: 2px solid transparent;
+}
+
+.navbar-sesion button:hover{
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+
+/* footer styles*/
+footer{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    background-color: rgb(51, 49, 49);
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container-section{
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+}
+
+.container-section {
+    width: 200px;
+    height: 130px;
+    text-align: justify;
+    letter-spacing: 50%;
+    line-height: 130%;
+}
+.container-section a{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container-section a:hover{
+    color: #ffff;
+}
+
+.container-section:nth-child(3) li{
+    list-style: none;
+    cursor: pointer;
+}
+.container-section:nth-child(3) a{
+    color: #ffff;
+}
+
